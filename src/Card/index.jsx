@@ -38,7 +38,6 @@ const StyledCard = styled.article`
   *::before,
   *::after {
     box-sizing: border-box;
-    cursor: default;
   }
 
   a {

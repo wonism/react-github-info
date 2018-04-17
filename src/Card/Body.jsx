@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import FontAwesome from 'react-fontawesome';
+import FaChain from 'react-icons/lib/fa/chain';
+import FaGroup from 'react-icons/lib/fa/group';
+import FaMapMarker from 'react-icons/lib/fa/map-marker';
 import AnchorWrapper from './AnchorWrapper';
 
 const StyledBody = styled.section`
@@ -10,16 +12,22 @@ const StyledBody = styled.section`
   border-bottom: 1px solid #eee;
   opacity: 0.8;
 
-  .fa {
+  svg {
     padding-right: 4px;
-  }
-
-  .float-right {
-    float: right;
+    font-size: 16px;
   }
 
   p {
     margin: 4px 0;
+
+    svg,
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  a {
+    cursor: pointer;
   }
 `;
 
@@ -40,20 +48,20 @@ const Body = ({
         rel="noopener noreferrer"
         isAnchor={!renderOnly}
       >
-        <FontAwesome name="link" />
-        Blog
+        <FaChain />
+        <span>Blog</span>
       </AnchorWrapper> :
       null}
     {company ?
       <p>
-        <FontAwesome name="users" />
-        {company}
+        <FaGroup />
+        <span>{company}</span>
       </p> :
       null}
     {location ?
       <p>
-        <FontAwesome name="map-marker" />
-        {location}
+        <FaMapMarker />
+        <span>{location}</span>
       </p> :
       null}
     <p>{bio}</p>

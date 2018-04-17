@@ -1,6 +1,6 @@
 {
   "name": "react-github-info",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keyword": [
     "react",
     "reactjs",
@@ -18,7 +18,7 @@
     "lint:js": "./node_modules/.bin/eslint src/**/*.js || true",
     "lint:css": "stylelint './src/**/*.js'"
   },
-  "author": "Jaewon <yocee57@gmail.com>",
+  "author": "wonism <yocee57@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/wonism/react-github-info/issues"
   },
-  "homepage": "https://jaewonism.com",
+  "homepage": "https://wonism.github.io/open-sources/react-github-info",
   "peerDependencies": {
     "react": "^15.0.0",
     "react-dom": "^15.0.0"
@@ -49,6 +49,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "husky": "^1.0.0-rc.1",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-config-styled-components": "^0.1.1",
@@ -64,9 +65,14 @@
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-fontawesome": "^1.6.1",
+    "react-icons": "^2.2.7",
     "styled-components": "^2.2.3",
     "styled-theming": "^2.2.0",
     "superagent": "^3.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run bundle"
+    }
   }
 }

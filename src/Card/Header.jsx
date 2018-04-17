@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import FontAwesome from 'react-fontawesome';
+import FaStar from 'react-icons/lib/fa/star';
 import { lineHeight } from '../constants';
 import FollowButton from './FollowButton';
 import AnchorWrapper from './AnchorWrapper';
@@ -12,8 +12,9 @@ const StyledHeader = styled.header`
   line-height: ${lineHeight};
   border-bottom: 1px solid #eee;
 
-  .fa {
+  svg {
     padding-right: 4px;
+    font-size: 16px;
   }
 
   h4 {
@@ -31,7 +32,6 @@ const StyledHeader = styled.header`
     opacity: 0.7;
   }
 
-  svg,
   img {
     position: absolute;
     top: 4px;
@@ -39,6 +39,10 @@ const StyledHeader = styled.header`
     width: 48px;
     height: 48px;
     border-radius: 4px;
+  }
+
+  a {
+    cursor: pointer;
   }
 `;
 
@@ -82,7 +86,7 @@ const Header = ({
       url={url}
       renderOnly={renderOnly}
     >
-      <FontAwesome name="star" />STAR
+      <FaStar />STAR
     </FollowButton>
   </StyledHeader>
 ) : (
